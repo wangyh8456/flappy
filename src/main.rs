@@ -168,7 +168,7 @@ impl Obstacle{
         //self_x和player_x为世界坐标，相减之后得到的screen_x为屏幕坐标
         let screen_x=self.x-player_x;
         let half_size=self.size/2;
-        //y是整形，绘制时按照高度1，x为screen_x，颜色为红色，背景为黑色，字符为|,一直到绘制出整个高度
+        //y是整形，绘制时按照高度1，x为screen_x，颜色为红色，背景为黑色，字符为|，绘制的宽度即为字符自己的宽度,一直到绘制出整个高度
         for y in 0..self.gap_y-half_size{
             ctx.set(screen_x,y,RED,BLACK,to_cp437('|'));
         }
